@@ -111,6 +111,7 @@ public class PlayerControllerScript : MonoBehaviour {
 
         playerAnimator.SetBool("isOnGround", isOnGround);
         playerAnimator.SetFloat("vSpeed", playerRigidbody.velocity.y);
+        Debug.Log("vSp=" + vSpeed + ", sp=" + speed + ", isOnG=" + isOnGround);
         float moveHoriz = Input.GetAxis("Horizontal");
         playerAnimator.SetFloat("speed", Mathf.Abs(moveHoriz));
 
