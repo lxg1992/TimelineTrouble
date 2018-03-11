@@ -27,6 +27,10 @@ public class CameraFollowWithBuffer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(player == null)
+        {
+            return;
+        }
         if (playerPosition.position.x > playerMoveTreshold.position.x)
         {
             this.transform.position = new Vector3(playerPosition.position.x, this.transform.position.y, this.transform.position.z);
