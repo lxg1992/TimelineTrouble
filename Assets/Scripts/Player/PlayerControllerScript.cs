@@ -6,19 +6,26 @@ public class PlayerControllerScript : MonoBehaviour {
     private Animator playerAnimator;   // player animater
     private Rigidbody2D playerRigidbody;
     private SpriteRenderer playerSpriteRenderer;
-
+    
+   
     public float maxSpeed = 5f;
     public float jumpForce = 200;
     public Transform groundCheck;
     public LayerMask defineGround;  // defined layer, like Floor
-
     private float speed, vSpeed;
-    private bool isOnGround = false;
-    private float groundRadius = 0.1f; 
+    public bool isOnGround = false;
+    private float groundRadius = 0.1f;
+
+    public bool isDoubleJumpAllowed = true;
+    private bool isOnFirstJump = false;
+    private bool isSecondJump = false;
+    private float DelayTimer = 0F;
+    private float WaitTime = 1F;
 
 
     // Use this for initialization
     void Start () {
+
         playerAnimator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
@@ -27,6 +34,29 @@ public class PlayerControllerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        //isOnGround = Physics2D.OverlapCircle(groundCheck.position, groundRadius, defineGround);
+
+        if (Input.GetKeyUp("space"))
+        {
+            //if (isOnFirstJump) isSecondJump = true;
+            //if (!isOnFirstJump) isOnFirstJump = true;
+            if (isOnFirstJump && Time.time > DelayTimer)
+            {
+                //print("second");
+                isSecondJump = true;
+            }
+
+            if (!isOnFirstJump && Time.time > DelayTimer)
+            {
+                //print("first");
+                isOnFirstJump = true;
+            }
+
+            DelayTimer -= Time.time + WaitTime;
+        }
+
+
         //if (Input.GetAxis("Jump") > 0 && isOnGround && vSpeed == 0)
         //{
         //    isOnGround = false;
@@ -44,21 +74,42 @@ public class PlayerControllerScript : MonoBehaviour {
     void FixedUpdate()
     {
         isOnGround = Physics2D.OverlapCircle(groundCheck.position, groundRadius, defineGround);
-        Debug.Log("Grounded? " + isOnGround/* + " Groundcheck: " + groundCheck*/);
+        //Debug.Log("Grounded? " + isOnGround/* + " Groundcheck: " + groundCheck*/);
 
-        if (Input.GetAxis("Jump") > 0 && isOnGround && vSpeed == 0)
+
+        if (isOnGround)
         {
-            isOnGround = false;
-            playerAnimator.SetBool("isOnGround", isOnGround);
-            playerRigidbody.AddForce(new Vector2(0, jumpForce));
+            isOnFirstJump = false;
+            isSecondJump = false;
         }
-        //else
-        //{
-        //    isOnGround = true;
-        //    playerAnimator.SetBool("isOnGround", isOnGround);
-        //}
 
-        playerAnimator.SetBool("isOnGound", isOnGround);
+
+        if (Input.GetAxis("Jump") > 0 && vSpeed == 0)
+        {
+            if (isOnGround)
+            {
+                isOnGround = false;
+                playerAnimator.SetBool("isOnGround", isOnGround);
+                playerRigidbody.AddForce(new Vector2(0, jumpForce));
+            }
+    
+            if (isSecondJump)
+            {
+                isSecondJump = false;
+                isOnFirstJump = false;
+                DelayTimer -= Time.time + WaitTime;
+
+               // Debug.ClearDeveloperConsole();
+                playerRigidbody.AddForce(new Vector2(0, jumpForce));
+            }
+        }
+        else
+        {
+            isOnGround = true;
+             //playerAnimator.SetBool("isOnGround", isOnGround);
+        }
+
+        playerAnimator.SetBool("isOnGround", isOnGround);
         playerAnimator.SetFloat("vSpeed", playerRigidbody.velocity.y);
         float moveHoriz = Input.GetAxis("Horizontal");
         playerAnimator.SetFloat("speed", Mathf.Abs(moveHoriz));
