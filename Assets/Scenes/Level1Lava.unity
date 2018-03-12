@@ -5198,6 +5198,16 @@ Prefab:
       value: 
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 50735302292247234, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: jumpForce
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_IsPrefabParent: 0
@@ -5652,7 +5662,7 @@ Prefab:
     - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
       propertyPath: jumpForce
-      value: 350
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4401613787700606, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5693,6 +5703,11 @@ Prefab:
       value: 
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 50735302292247234, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_IsPrefabParent: 0
@@ -5747,7 +5762,7 @@ Prefab:
     - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
       propertyPath: jumpForce
-      value: 350
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
@@ -5798,6 +5813,11 @@ Prefab:
       value: 
       objectReference: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 50735302292247234, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_IsPrefabParent: 0

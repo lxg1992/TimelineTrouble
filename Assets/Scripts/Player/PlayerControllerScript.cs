@@ -37,7 +37,7 @@ public class PlayerControllerScript : MonoBehaviour {
 
         //isOnGround = Physics2D.OverlapCircle(groundCheck.position, groundRadius, defineGround);
 
-        if (Input.GetKeyUp("space"))
+        if (Input.GetAxis("Jump") > 0)
         {
             //if (isOnFirstJump) isSecondJump = true;
             //if (!isOnFirstJump) isOnFirstJump = true;
@@ -73,6 +73,12 @@ public class PlayerControllerScript : MonoBehaviour {
     }
     void FixedUpdate()
     {
+
+        vSpeed = playerRigidbody.velocity.y;
+        float moveHoriz = Input.GetAxis("Horizontal");
+        speed = Mathf.Abs(moveHoriz);
+
+        speed = playerRigidbody.velocity.x;
         isOnGround = Physics2D.OverlapCircle(groundCheck.position, groundRadius, defineGround);
         //Debug.Log("Grounded? " + isOnGround/* + " Groundcheck: " + groundCheck*/);
 
@@ -88,15 +94,15 @@ public class PlayerControllerScript : MonoBehaviour {
         {
             if (isOnGround)
             {
-                isOnGround = false;
                 playerAnimator.SetBool("isOnGround", isOnGround);
+                isOnFirstJump = true;
                 playerRigidbody.AddForce(new Vector2(0, jumpForce));
             }
     
             if (isSecondJump)
             {
-                isSecondJump = false;
-                isOnFirstJump = false;
+                //isSecondJump = false;
+                //isOnFirstJump = false;
                 DelayTimer -= Time.time + WaitTime;
 
                // Debug.ClearDeveloperConsole();
@@ -105,17 +111,20 @@ public class PlayerControllerScript : MonoBehaviour {
         }
         else
         {
-            isOnGround = true;
-             //playerAnimator.SetBool("isOnGround", isOnGround);
+            //playerAnimator.SetBool("isOnGround", isOnGround);
         }
 
         playerAnimator.SetBool("isOnGround", isOnGround);
-        playerAnimator.SetFloat("vSpeed", playerRigidbody.velocity.y);
-        Debug.Log("vSp=" + vSpeed + ", sp=" + speed + ", isOnG=" + isOnGround);
-        float moveHoriz = Input.GetAxis("Horizontal");
-        playerAnimator.SetFloat("speed", Mathf.Abs(moveHoriz));
+        playerAnimator.SetFloat("vSpeed", vSpeed);
 
-        playerRigidbody.velocity = new Vector2(moveHoriz * maxSpeed, playerRigidbody.velocity.y);
+
+        Debug.Log("vSp=" + vSpeed + ", sp=" + speed + ", isOnG=" + isOnGround + ", FirstJump=" + isOnFirstJump + ", SecondJump=" + isSecondJump);
+        //Debug.Log("DelayTimer: " + DelayTimer + ", Time: " + Time.time);
+
+
+        playerAnimator.SetFloat("speed", speed);
+
+        playerRigidbody.velocity = new Vector2(moveHoriz * maxSpeed, vSpeed);
 
         if (moveHoriz > 0)
         {
