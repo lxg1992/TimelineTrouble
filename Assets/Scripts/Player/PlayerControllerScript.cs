@@ -12,7 +12,7 @@ public class PlayerControllerScript : MonoBehaviour {
     public float jumpForce = 200;
     public Transform groundCheck;
     public LayerMask defineGround;  // defined layer, like Floor
-    private float speed, vSpeed;
+    private float speed, vSpeed, absSpeed;
     public bool isOnGround = false;
     private float groundRadius = 0.1f;
 
@@ -123,6 +123,10 @@ public class PlayerControllerScript : MonoBehaviour {
 
 
         playerAnimator.SetFloat("speed", speed);
+
+
+        absSpeed = Mathf.Abs(speed);
+        playerAnimator.SetFloat("AbsoluteSpeed", absSpeed);
 
         playerRigidbody.velocity = new Vector2(moveHoriz * maxSpeed, vSpeed);
 

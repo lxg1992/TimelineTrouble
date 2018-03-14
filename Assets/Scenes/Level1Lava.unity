@@ -5201,12 +5201,22 @@ Prefab:
     - target: {fileID: 50735302292247234, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
       propertyPath: m_GravityScale
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
       propertyPath: jumpForce
-      value: 500
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 50735302292247234, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
@@ -5662,7 +5672,7 @@ Prefab:
     - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
       propertyPath: jumpForce
-      value: 400
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 4401613787700606, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5706,7 +5716,12 @@ Prefab:
     - target: {fileID: 50735302292247234, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
       propertyPath: m_GravityScale
-      value: 1.5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
@@ -5762,7 +5777,7 @@ Prefab:
     - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
       propertyPath: jumpForce
-      value: 400
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
@@ -5816,7 +5831,12 @@ Prefab:
     - target: {fileID: 50735302292247234, guid: edcdadb654717cb40b9f132a39527a29,
         type: 2}
       propertyPath: m_GravityScale
-      value: 1.5
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
