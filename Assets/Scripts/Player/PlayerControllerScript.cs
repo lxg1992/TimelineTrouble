@@ -6,8 +6,13 @@ public class PlayerControllerScript : MonoBehaviour {
     private Animator playerAnimator;   // player animater
     private Rigidbody2D playerRigidbody;
     private SpriteRenderer playerSpriteRenderer;
-    
-   
+
+    //for the finish line
+    private Transform playerTransform;
+    private Collider2D col2D;
+    public float winCheckRadius = 0.2f;
+    public LayerMask finishLine;
+
     public float maxSpeed = 5f;
     public float jumpForce = 200;
     public Transform groundCheck;
@@ -29,15 +34,22 @@ public class PlayerControllerScript : MonoBehaviour {
         playerAnimator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
+        playerTransform = GetComponent<Transform>();
         //Debug.Log("Grounded? " + isOnGround/* + " Groundcheck: " + groundCheck*/);
     }
 	
 	// Update is called once per frame
 	void Update () {
 
-        //isOnGround = Physics2D.OverlapCircle(groundCheck.position, groundRadius, defineGround);
+        col2D = Physics2D.OverlapCircle(playerTransform.position, winCheckRadius, finishLine);
+        if (col2D != null && col2D.tag == "Finish")
+        {
+            col2D.GetComponent<Finishline>().PrepareSmoke();
+        }
 
-        if (Input.GetAxis("Jump") > 0)
+            //isOnGround = Physics2D.OverlapCircle(groundCheck.position, groundRadius, defineGround);
+
+            if (Input.GetAxis("Jump") > 0)
         {
             //if (isOnFirstJump) isSecondJump = true;
             //if (!isOnFirstJump) isOnFirstJump = true;
@@ -118,7 +130,7 @@ public class PlayerControllerScript : MonoBehaviour {
         playerAnimator.SetFloat("vSpeed", vSpeed);
 
 
-        Debug.Log("vSp=" + vSpeed + ", sp=" + speed + ", isOnG=" + isOnGround + ", FirstJump=" + isOnFirstJump + ", SecondJump=" + isSecondJump);
+        //Debug.Log("vSp=" + vSpeed + ", sp=" + speed + ", isOnG=" + isOnGround + ", FirstJump=" + isOnFirstJump + ", SecondJump=" + isSecondJump);
         //Debug.Log("DelayTimer: " + DelayTimer + ", Time: " + Time.time);
 
 
