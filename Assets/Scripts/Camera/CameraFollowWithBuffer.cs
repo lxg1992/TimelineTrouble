@@ -15,37 +15,58 @@ public class CameraFollowWithBuffer : MonoBehaviour
 
     private bool passedThreshold;
 
+    public List<Transform> Players;
+
     // Use this for initialization
     void Start()
     {
         playerController = player.GetComponent<PlayerControllerScript>();
         originalPlayerMoveThresholdPosition = playerMoveTreshold.position;
 
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player == null)
+        float max = 0f;
+        if (Players.Count > 0)
         {
-            return;
+            for (int i = 0; i < Players.Count; i++)
+            {
+                if (Players[i] != null)
+                {
+                    if (Players[i].position.x > max)
+                    {
+                        max = Players[i].position.x;
+                    }
+                }
+                
+            }
         }
-        if (playerPosition.position.x > playerMoveTreshold.position.x)
+        if (max > playerMoveTreshold.position.x)
         {
-            this.transform.position = new Vector3(playerPosition.position.x, this.transform.position.y, this.transform.position.z);
-            passedThreshold = true;
+            transform.position = new Vector3(max, transform.position.y, transform.position.z);
         }
 
-        if (passedThreshold && playerPosition.position.x > originalPlayerMoveThresholdPosition.x)
-        {
-            this.transform.position = new Vector3(playerPosition.position.x, this.transform.position.y, this.transform.position.z);
-        }
+        //if(player == null)
+        //{
+        //    return;
+        //}
+        //if (playerPosition.position.x > playerMoveTreshold.position.x)
+        //{
+        //    this.transform.position = new Vector3(playerPosition.position.x, this.transform.position.y, this.transform.position.z);
+        //    passedThreshold = true;
+        //}
 
-        if (playerPosition.position.x < originalPlayerMoveThresholdPosition.x)
-        {
-            passedThreshold = false;
-        }
+        //if (passedThreshold && playerPosition.position.x > originalPlayerMoveThresholdPosition.x)
+        //{
+        //    this.transform.position = new Vector3(playerPosition.position.x, this.transform.position.y, this.transform.position.z);
+        //}
+
+        //if (playerPosition.position.x < originalPlayerMoveThresholdPosition.x)
+        //{
+        //    passedThreshold = false;
+        //}
     }
 
     private void OnDrawGizmosSelected()
