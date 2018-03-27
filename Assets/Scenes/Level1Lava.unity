@@ -5896,6 +5896,21 @@ Prefab:
       propertyPath: m_Name
       value: TopPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 50735302292247234, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: maxSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114463444028121206, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: jumpForce
+      value: 700
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_IsPrefabParent: 0
@@ -6094,7 +6109,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4b44cb2de056a4647884651c7d03c1f9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7110a58b5271f244b944acd2e930bd53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6111,8 +6126,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1856894070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69, y: 9.1, z: 0}
-  m_LocalScale: {x: 42.182487, y: 7.800024, z: 3}
+  m_LocalPosition: {x: 88.6, y: -0.2, z: 0}
+  m_LocalScale: {x: 7.3663654, y: 3.1548254, z: 2.9822292}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
