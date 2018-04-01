@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4189582784100298}
   - component: {fileID: 212734814189208344}
   - component: {fileID: 61788784802443478}
+  - component: {fileID: 114151562590170968}
   m_Layer: 0
   m_Name: NiceBlock
   m_TagString: Untagged
@@ -35,8 +36,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1570869652036566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.504578, y: 1.2958344, z: 0}
-  m_LocalScale: {x: 1.0155513, y: 1, z: 1}
+  m_LocalPosition: {x: 54.01785, y: -18.410042, z: 0}
+  m_LocalScale: {x: 1.0466549, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -66,6 +67,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56}
   m_EdgeRadius: 0
+--- !u!114 &114151562590170968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570869652036566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c876712d1143e64eafb59ccc3358783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212734814189208344
 SpriteRenderer:
   m_ObjectHideFlags: 1
