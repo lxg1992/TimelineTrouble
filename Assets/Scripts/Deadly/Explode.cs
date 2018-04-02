@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Explode : MonoBehaviour {
 
@@ -16,9 +18,10 @@ public class Explode : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D target)
     {
-        if (target.gameObject.tag == "Deadly" || target.gameObject.tag == "Finish")
+        if (target.gameObject.tag == "Deadly")
         {
             OnExplode();
+			SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 
         }
     }
