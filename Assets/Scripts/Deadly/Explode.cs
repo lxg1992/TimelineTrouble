@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Explode : MonoBehaviour {
 
+    public AudioClip swordSwing1;
+
     // Use this for initialization
     void Start() {
 
