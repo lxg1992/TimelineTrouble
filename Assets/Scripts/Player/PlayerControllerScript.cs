@@ -27,15 +27,20 @@ public class PlayerControllerScript : MonoBehaviour {
     private float DelayTimer = 0F;
     private float WaitTime = 1F;
 
+    private AudioSource spawn;
 
     // Use this for initialization
     void Start () {
 
+        
         playerAnimator = GetComponent<Animator>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerSpriteRenderer = GetComponent<SpriteRenderer>();
         playerTransform = GetComponent<Transform>();
         //Debug.Log("Grounded? " + isOnGround/* + " Groundcheck: " + groundCheck*/);
+
+        spawn = GetComponent<AudioSource>();
+        spawn.Play();
     }
 	
 	// Update is called once per frame
@@ -44,7 +49,7 @@ public class PlayerControllerScript : MonoBehaviour {
         col2D = Physics2D.OverlapCircle(playerTransform.position, winCheckRadius, finishLine);
         if (col2D != null && col2D.tag == "Finish")
         {
-            col2D.GetComponent<Finishline>().PrepareSmoke();
+            //col2D.GetComponent<Finishline>().PrepareSmoke();
         }
 
             //isOnGround = Physics2D.OverlapCircle(groundCheck.position, groundRadius, defineGround);

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 95932071888822450}
   - component: {fileID: 70893286829832558}
   - component: {fileID: 114463444028121206}
+  - component: {fileID: 114474669492713458}
   - component: {fileID: 82781347389020748}
   m_Layer: 10
   m_Name: Player
@@ -259,6 +260,17 @@ MonoBehaviour:
     m_Bits: 256
   isOnGround: 0
   isDoubleJumpAllowed: 1
+--- !u!114 &114474669492713458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089909852971366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a671c97e18dd44eadd3eaf9c26191d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212138349360106270
 SpriteRenderer:
   m_ObjectHideFlags: 1
