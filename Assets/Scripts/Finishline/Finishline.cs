@@ -5,7 +5,11 @@ using UnityEngine;
 public class Finishline : MonoBehaviour {
 
     private Animator timeMachineAnimator;
+    private bool isTouching = false;
     public GameObject smoke;
+
+    //to delete once finishline is actually done
+    private bool touched = false;
 
 	// Use this for initialization
 	void Start () {
@@ -15,18 +19,18 @@ public class Finishline : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D target)
     {
         
-        if (target.gameObject.tag == "Player")
+        if (target.gameObject.tag == "Player" && touched == false)
         {
-            Invoke("Smoke", 0.66f);
+            isTouching = true;
+            touched = true;
+            Invoke("Smoke", 0.75f);
 
         }
     }
 
     public void PrepareSmoke()
     {
-        Debug.Log("Butts");
-        timeMachineAnimator.SetBool("PlayerTouch0", true);
-        Invoke("Smoke", 0.66f);
+        Invoke("Smoke", 0.75f);
     }
 
     void Smoke()
@@ -36,6 +40,6 @@ public class Finishline : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        timeMachineAnimator.SetBool("PlayerTouch", isTouching);
 	}
 }
