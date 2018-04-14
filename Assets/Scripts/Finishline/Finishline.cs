@@ -7,6 +7,7 @@ public class Finishline : MonoBehaviour {
     private Animator timeMachineAnimator;
     private bool isTouching = false;
     public GameObject smoke;
+    public Score score;
 
     //to delete once finishline is actually done
     private bool touched = false;
@@ -25,7 +26,10 @@ public class Finishline : MonoBehaviour {
             touched = true;
             Invoke("Smoke", 0.75f);
 
+            //Score
+            score.machineLeave();
         }
+
     }
 
     public void PrepareSmoke()
