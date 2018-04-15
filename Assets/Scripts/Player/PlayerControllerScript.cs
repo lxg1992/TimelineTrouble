@@ -45,7 +45,6 @@ public class PlayerControllerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         col2D = Physics2D.OverlapCircle(playerTransform.position, winCheckRadius, finishLine);
         if (col2D != null && col2D.tag == "Finish")
         {

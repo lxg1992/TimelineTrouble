@@ -5,11 +5,13 @@ using UnityEngine;
 public class Collectibles : MonoBehaviour {
 
     private bool touch = false;
+    private Animator animController;
     private AudioSource collectSFX;
 
 	// Use this for initialization
 	void Start () {
         collectSFX = GetComponent<AudioSource>();
+        animController = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -24,8 +26,10 @@ public class Collectibles : MonoBehaviour {
     {
         if (target.gameObject.tag == "Player" && !touch)
         {
-            collectSFX.Play();
             touch = true;
+            animController.SetBool("collected", touch);
+            collectSFX.Play();
+            
         }
     }
 
