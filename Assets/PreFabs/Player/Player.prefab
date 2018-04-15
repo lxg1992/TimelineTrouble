@@ -26,6 +26,10 @@ GameObject:
   - component: {fileID: 114463444028121206}
   - component: {fileID: 114474669492713458}
   - component: {fileID: 82781347389020748}
+  - component: {fileID: 114080082077588552}
+  - component: {fileID: 114855743398230088}
+  - component: {fileID: 114154000724427602}
+  - component: {fileID: 114987263506471046}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -59,7 +63,7 @@ GameObject:
   m_Layer: 10
   m_Name: ObstacleDetector
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -70,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1208826379153788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.244, y: 0.1, z: -0}
+  m_LocalPosition: {x: 0.22, y: -0.03, z: -0}
   m_LocalScale: {x: 2.0884254, y: 2.0884264, z: 2.0884264}
   m_Children: []
   m_Father: {fileID: 4749830517427762}
@@ -83,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1742663504324922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.5, y: 0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4749830517427762}
@@ -96,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1089909852971366}
   m_LocalRotation: {x: -0, y: -0.03608101, z: -0, w: 0.9993489}
-  m_LocalPosition: {x: -15.53, y: 15.18, z: 0}
+  m_LocalPosition: {x: -25, y: 15.18, z: 0}
   m_LocalScale: {x: 0.8041498, y: 0.72422194, z: 0.80415}
   m_Children:
   - {fileID: 4401613787700606}
@@ -118,8 +122,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 3
+  m_Material: {fileID: 6200000, guid: 41b215343b8fde449a7da09e9d738329, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -237,6 +241,32 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114080082077588552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089909852971366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a671c97e18dd44eadd3eaf9c26191d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114154000724427602
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089909852971366}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d6b9f595716a94889d08d728826f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sightStart: {fileID: 0}
+  sightEnd: {fileID: 0}
+  layer: Solid
+  needsCollision: 1
 --- !u!114 &114463444028121206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -251,9 +281,9 @@ MonoBehaviour:
   winCheckRadius: 0.2
   finishLine:
     serializedVersion: 2
-    m_Bits: 0
-  maxSpeed: 5
-  jumpForce: 350
+    m_Bits: 2048
+  maxSpeed: 10
+  jumpForce: 700
   groundCheck: {fileID: 4401613787700606}
   defineGround:
     serializedVersion: 2
@@ -261,6 +291,28 @@ MonoBehaviour:
   isOnGround: 0
   isDoubleJumpAllowed: 1
 --- !u!114 &114474669492713458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089909852971366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a671c97e18dd44eadd3eaf9c26191d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114855743398230088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1089909852971366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a671c97e18dd44eadd3eaf9c26191d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114987263506471046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -304,9 +356,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 743de4789e86be441831c51f4254772a, type: 3}
-  m_Color: {r: 0.959, g: 0.9558824, b: 0.1475995, a: 1}
+  m_Color: {r: 0.63529414, g: 0.89019614, b: 0.7568628, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
