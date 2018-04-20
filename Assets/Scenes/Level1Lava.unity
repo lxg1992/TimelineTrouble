@@ -5437,21 +5437,6 @@ Prefab:
       propertyPath: m_Name
       value: TopPlayer
       objectReference: {fileID: 0}
-    - target: {fileID: 212138349360106270, guid: edcdadb654717cb40b9f132a39527a29,
-        type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212138349360106270, guid: edcdadb654717cb40b9f132a39527a29,
-        type: 2}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212138349360106270, guid: edcdadb654717cb40b9f132a39527a29,
-        type: 2}
-      propertyPath: m_Color.g
-      value: 0.06206899
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_IsPrefabParent: 0
@@ -5964,7 +5949,16 @@ Prefab:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114080082077588552, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2094352850
@@ -6025,7 +6019,16 @@ Prefab:
       propertyPath: m_Color.b
       value: 0.014381501
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114080082077588552, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2108536802 stripped
