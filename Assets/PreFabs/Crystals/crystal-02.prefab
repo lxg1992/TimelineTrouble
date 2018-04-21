@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114808404076706890}
   - component: {fileID: 82192782001983088}
   - component: {fileID: 95417188444917192}
+  - component: {fileID: 8195094280208267416}
   m_Layer: 0
   m_Name: crystal-02
   m_TagString: Untagged
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1436983899699440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 29.546387, y: -14.855263, z: 0}
+  m_LocalPosition: {x: 26.05, y: -14.855263, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -178,6 +179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c1506ea08f15ac48a2a2fbe50e8b64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  globals: {fileID: 0}
+  scoreValue: 30
+  displayText: {fileID: 0}
 --- !u!212 &212223887161367024
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -222,3 +226,40 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1839735485 &8195094280208267416
+Tilemap:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1436983899699440}
+  m_Enabled: 1
+  m_Tiles: {}
+  m_AnimatedTiles: {}
+  m_TileAssetArray: []
+  m_TileSpriteArray: []
+  m_TileMatrixArray: []
+  m_TileColorArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0, y: 0, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  m_TileRefreshArray: []

@@ -2731,7 +2731,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
@@ -16135,6 +16135,22 @@ Prefab:
       propertyPath: m_Color.b
       value: 0.9558824
       objectReference: {fileID: 0}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: playerDebris
+      value: 
+      objectReference: {fileID: 114182623964564424, guid: beedd60e736bd014c93ea891efe64bb5,
+        type: 2}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: globals
+      value: 
+      objectReference: {fileID: 1496226873}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: displayText
+      value: 
+      objectReference: {fileID: 500880544}
     m_RemovedComponents:
     - {fileID: 114080082077588552, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
@@ -18083,6 +18099,22 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: playerDebris
+      value: 
+      objectReference: {fileID: 114182623964564424, guid: beedd60e736bd014c93ea891efe64bb5,
+        type: 2}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: globals
+      value: 
+      objectReference: {fileID: 1496226873}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: displayText
+      value: 
+      objectReference: {fileID: 500880544}
     m_RemovedComponents:
     - {fileID: 114080082077588552, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
@@ -18234,8 +18266,25 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: playerDebris
+      value: 
+      objectReference: {fileID: 114182623964564424, guid: beedd60e736bd014c93ea891efe64bb5,
+        type: 2}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: globals
+      value: 
+      objectReference: {fileID: 1496226873}
+    - target: {fileID: 114474669492713458, guid: edcdadb654717cb40b9f132a39527a29,
+        type: 2}
+      propertyPath: displayText
+      value: 
+      objectReference: {fileID: 500880544}
     m_RemovedComponents:
     - {fileID: 114080082077588552, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
+    - {fileID: 114154000724427602, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: edcdadb654717cb40b9f132a39527a29, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &2107620776

@@ -42,6 +42,11 @@ public class ScoreSheet : MonoBehaviour {
         return gameScore;
     }
 
+    public void ResetScore()
+    {
+        gameScore = 0;
+    }
+
     public string ScoreText()
     {
         return ("Score: " + gameScore);
