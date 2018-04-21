@@ -4,9 +4,9 @@ This is a Unity 2D Platformer that is created by a team of developers in a Game 
 
 The premise of the game is using 3 characters controlled by a single control input (simultaneously). 
 
-As of writing this (April 13th, 2018) the latest build is available at:
+As of writing this (April 21st, 2018) the latest build is available at:
 
-http://unity-games-webgl.herokuapp.com/timelinetrouble3
+http://unity-games-webgl.herokuapp.com/timelinetrouble
 
 (Quit option is designed for desktop)
 
