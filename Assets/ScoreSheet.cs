@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ScoreSheet : MonoBehaviour {
 
-    private int  gameScore = 0;
+    private static int  gameScore = 0;
 
 	// Use this for initialization
 	void Start()
@@ -27,7 +27,7 @@ public class ScoreSheet : MonoBehaviour {
         {
             DontDestroyOnLoad(this.gameObject);
             created = true;
-            gameScore = 0;
+            //gameScore = 0;
             Debug.Log("Awake: " + this.gameObject);
         }
     }
@@ -39,6 +39,6 @@ public class ScoreSheet : MonoBehaviour {
 
     public int GetScore()
     {
-        return this.gameScore;
+        return gameScore;
     }
 }
