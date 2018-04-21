@@ -1026,6 +1026,16 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114745919997766824, guid: c247aca2e5c7c044c9fe265a51a5ec17,
+        type: 2}
+      propertyPath: scoreValue
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114745919997766824, guid: c247aca2e5c7c044c9fe265a51a5ec17,
+        type: 2}
+      propertyPath: globals
+      value: 
+      objectReference: {fileID: 1340558490}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c247aca2e5c7c044c9fe265a51a5ec17, type: 2}
   m_IsPrefabParent: 0
@@ -2446,6 +2456,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114808404076706890, guid: d43a5a89cb8f2ee418880d0ebe401c4c,
+        type: 2}
+      propertyPath: scoreValue
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114808404076706890, guid: d43a5a89cb8f2ee418880d0ebe401c4c,
+        type: 2}
+      propertyPath: globals
+      value: 
+      objectReference: {fileID: 1340558490}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d43a5a89cb8f2ee418880d0ebe401c4c, type: 2}
   m_IsPrefabParent: 0
@@ -10342,6 +10362,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1340558490
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1340558492}
+  - component: {fileID: 1340558491}
+  m_Layer: 0
+  m_Name: Globals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1340558491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340558490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766ea8b228ed275479f0be5d926cdbe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1340558492
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340558490}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.249606, y: 4.7661934, z: 0.5067861}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1425413720
 Prefab:
   m_ObjectHideFlags: 0
@@ -10381,6 +10441,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114363558449752952, guid: baaee2f4ef2628047bf7ebbcf2b9f6ec,
+        type: 2}
+      propertyPath: scoreValue
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114363558449752952, guid: baaee2f4ef2628047bf7ebbcf2b9f6ec,
+        type: 2}
+      propertyPath: globals
+      value: 
+      objectReference: {fileID: 1340558490}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: baaee2f4ef2628047bf7ebbcf2b9f6ec, type: 2}
   m_IsPrefabParent: 0
@@ -10428,6 +10498,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114953342265789480, guid: e3ae8bc42d8801a469311036de24b375,
+        type: 2}
+      propertyPath: scoreValue
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953342265789480, guid: e3ae8bc42d8801a469311036de24b375,
+        type: 2}
+      propertyPath: globals
+      value: 
+      objectReference: {fileID: 1340558490}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e3ae8bc42d8801a469311036de24b375, type: 2}
   m_IsPrefabParent: 0
@@ -11321,6 +11401,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114039836214803056, guid: 911dba32e7cbeec4d96077a36880dea0,
+        type: 2}
+      propertyPath: scoreValue
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114039836214803056, guid: 911dba32e7cbeec4d96077a36880dea0,
+        type: 2}
+      propertyPath: globals
+      value: 
+      objectReference: {fileID: 1340558490}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 911dba32e7cbeec4d96077a36880dea0, type: 2}
   m_IsPrefabParent: 0
