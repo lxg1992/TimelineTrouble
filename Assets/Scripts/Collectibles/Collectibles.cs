@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Collectibles : MonoBehaviour {
 
     public GameObject globals;
     private ScoreSheet scoreSheet;
     public int scoreValue ;
+
+    public Text displayText;
+
     private bool touch = false;
     private Animator animController;
     private AudioSource collectSFX;
@@ -16,6 +20,8 @@ public class Collectibles : MonoBehaviour {
         collectSFX = GetComponent<AudioSource>();
         animController = GetComponent<Animator>();
         scoreSheet = globals.GetComponent<ScoreSheet>();
+
+        SetCountText();
     }
 
     // Update is called once per frame
@@ -31,6 +37,7 @@ public class Collectibles : MonoBehaviour {
         if (target.gameObject.tag == "Player" && !touch)
         {
             scoreSheet.AddScore(this.scoreValue);
+            SetCountText();
             Debug.Log("current score is :" + scoreSheet.GetScore());
             touch = true;
             animController.SetBool("collected", touch);
@@ -39,4 +46,8 @@ public class Collectibles : MonoBehaviour {
         }
     }
 
+    private void SetCountText()
+    {
+            displayText.text = scoreSheet.ScoreText();
+    }
 }

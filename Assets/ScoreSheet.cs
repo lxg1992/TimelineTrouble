@@ -41,4 +41,9 @@ public class ScoreSheet : MonoBehaviour {
     {
         return gameScore;
     }
+
+    public string ScoreText()
+    {
+        return ("Score: " + gameScore);
+    }
 }
